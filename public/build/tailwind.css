@@ -588,9 +588,16 @@ video {
 .m-2{
   margin: 0.5rem;
 }
+.m-1{
+  margin: 0.25rem;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 .mt-9{
   margin-top: 2.25rem;
@@ -905,6 +912,9 @@ video {
 }
 .font-bold{
   font-weight: 700;
+}
+.font-medium{
+  font-weight: 500;
 }
 .text-slate-800{
   --tw-text-opacity: 1;
