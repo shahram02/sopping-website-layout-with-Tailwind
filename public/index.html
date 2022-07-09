@@ -68,14 +68,94 @@
         <span class="text-sm text-slate-800 mr-2">فیلتر:برند اپل</span>
       </div>
     </div>
-    <!-- desktop -->
+    <!-- Nav Bar desktop -->
+
+    <header
+      class="mb-5 w-full hidden md:block px-2 sticky top-0 z-10 p-2 bg-white shadow-lg"
+    >
+      <div
+        class="flex container gap-x-2 mx-auto max-w-screen-2xl items-center justify-between"
+      >
+        <nav class="flex">
+          <ul
+            class="flex flex-row text-base xl:text-lg p-1 lg:gap-x-4 justify-between text-slate-900"
+          >
+            <li class="">
+              <a
+                href="#"
+                class="py-2 px-3 block hover:bg-gray-100 rounded-md transition-all duration-300"
+                >LOGO</a
+              >
+            </li>
+            <li class="">
+              <a
+                href="#"
+                class="py-2 px-3 block hover:bg-gray-100 rounded-md transition-all duration-300"
+                >خانه</a
+              >
+            </li>
+            <li class="">
+              <a
+                href="#"
+                class="py-2 px-3 block hover:bg-gray-100 rounded-md transition-all duration-300"
+                >تلفن همراه</a
+              >
+            </li>
+            <li class="">
+              <a
+                href="#"
+                class="py-2 px-3 block hover:bg-gray-100 rounded-md transition-all duration-300"
+                >لب تاب</a
+              >
+            </li>
+            <li class="">
+              <a
+                href="#"
+                class="py-2 px-3 block hover:bg-gray-100 rounded-md transition-all duration-300"
+                >ساعت هوشمند</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- search bar -->
+        <div class="flex-1 max-w-xl mr-3">
+          <div
+            class="flex justify-between items-center p-1 bg-stone-100 rounded-lg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 ml-3 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+
+            <input
+              class="focus:outline-none bg-stone-100 w-full text-slate-500 p-2"
+              type="text"
+              placeholder="جست و جوی نام محصول,نام برند,نام مدل و..."
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Content -->
     <div
-      class="grid grid-cols-12 mid:grid-rows-[55px_minmax(500px,_1fr)] md:gap-8"
+      class="container max-w-screen-2xl mx-auto grid grid-cols-12 mid:grid-rows-[55px_minmax(500px,_1fr)] md:gap-4"
     >
       <!-- sideBar -->
-      <div class="hidden md:block lg:col-span-3 col-span-4 row-span-2">
+      <div
+        class="hidden md:block col-span-4 lg:col-span-3 xl:col-span-2 row-span-2"
+      >
         <!-- side -->
-        <div class="bg-white p-4">
+        <div class="bg-white p-2 max-h-[Calc(100vh_-_150px)] overflow-auto sticky top-[87px]">
           <div>
             <h4 class="font-bold text-xl mb-8 text-orange-400">دسته بندی</h4>
 
@@ -148,7 +228,10 @@
           <div>
             <h4 class="font-bold text-xl mb-8 text-orange-400">فیلتر</h4>
             <!-- Accordion 1 -->
-            <div x-data="{openBrand:false,activeClass:'rotate-180'}" class="mb-4">
+            <div
+              x-data="{openBrand:false,activeClass:'rotate-180'}"
+              class="mb-4"
+            >
               <!-- Accordion 1 header -->
               <div
                 @click="openBrand=!openBrand"
@@ -233,7 +316,10 @@
               </div>
             </div>
             <!-- Accordion 2 -->
-            <div x-data="{openColor:false,activeClass:'rotate-180'}" class="mb-4">
+            <div
+              x-data="{openColor:false,activeClass:'rotate-180'}"
+              class="mb-4"
+            >
               <!-- Accordion 1 header -->
               <div
                 @click="openColor=!openColor"
@@ -365,9 +451,10 @@
         </div>
       </div>
       <!-- filter-sort desktop section -->
+
       <div
         x-data="{sort:1,activeClass:'text-slate-800 font-bold'}"
-        class="hidden text-sm w-full text-gray-300 bg-white md:flex justify-start gap-x-4 col-span-8 lg:col-span-9"
+        class="ml-4 hidden text-s w-full text-gray-300 bg-white md:flex justify-start gap-x-4 col-span-8 lg:col-span-9 xl:col-span-10"
       >
         <!-- icon sort -->
         <div
@@ -394,7 +481,7 @@
           :class="sort===1 && activeClass"
           class="p-2 relative"
         >
-          <span>محبوب ترین محصول</span>
+          <span>محبوب ترین</span>
           <span
             x-show="sort===1"
             class="w-2 h-2 rounded-full bg-orange-700 top-3 left-0 absolute"
@@ -405,7 +492,7 @@
           :class="sort===2 && activeClass"
           class="p-2 relative"
         >
-          <span> پربازدیدترین محصول</span>
+          <span> پربازدیدترین</span>
           <span
             x-show="sort===2"
             class="w-2 h-2 rounded-full bg-orange-700 top-3 left-0 absolute"
@@ -416,7 +503,7 @@
           :class="sort===3 && activeClass"
           class="p-2 relative"
         >
-          <span> گرانترین محصول</span>
+          <span> گرانترین</span>
           <span
             x-show="sort===3"
             class="w-2 h-2 rounded-full bg-orange-700 top-3 left-0 absolute"
@@ -427,15 +514,16 @@
           :class="sort===4 && activeClass"
           class="p-2 relative"
         >
-          <span> ارزانترین محصول</span>
+          <span> ارزانترین</span>
           <span
             x-show="sort===4"
             class="w-2 h-2 rounded-full bg-orange-700 top-3 left-0 absolute"
           ></span>
         </button>
       </div>
+      <!-- End Sort -->
 
-      <div class="col-span-12 md:col-span-8 lg:col-span-9">
+      <div class="ml-4 col-span-12 md:col-span-8 lg:col-span-9 xl:col-span-10">
         <!-- Products section -->
         <div
           x-data="{
