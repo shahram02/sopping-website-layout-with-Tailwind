@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single Page PRoduct</title>
+    <title>Single Page Product</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
   </head>
   <body class="bg-gray-100">
@@ -263,16 +263,41 @@
         <div class="flex bg-white md:gap-y-4 rounded-lg md:p-4">
           <!-- Single Products -->
           <div
-            class="flex flex-col bg-gray-100 md:bg-white md:gap-x-4 w-full md:w-4/5 lg:flex-row flex-auto items-center md:justify-start md:items-start md:px-0 px-4 gap-y-9"
+            class="flex flex-col bg-gray-100 lg:bg-white lg:gap-x-4 w-full lg:w-3/4 lg:flex-row flex-auto items-center lg:justify-start lg:items-start lg:px-0 px-4 lg:px-0 gap-y-9"
           >
             <!-- Image Products -->
-            <div class="max-w-[265px] xl:max-w-sm">
+            <div class="max-w-[265px] flex-col xl:max-w-sm">
               <!-- image Product -->
               <img
                 class="w-full h-auto scale-125 xl:-mt-12 -mt-8"
                 src="/assets/img/Home/1.png"
                 alt=""
               />
+              <div
+                class="md:flex hidden mt-4 items-center justify-between gap-x-3"
+              >
+                <div class="border rounded-md border-gray-300 p-2">
+                  <img
+                    class="w-16 h-auto"
+                    src="/assets/img/Single Product/Gallery - 2.png"
+                    alt=""
+                  />
+                </div>
+                <div class="border rounded-md border-gray-300 p-2">
+                  <img
+                    class="w-16 h-auto"
+                    src="/assets/img/Single Product/Gallery - 3.png"
+                    alt=""
+                  />
+                </div>
+                <div class="border rounded-md border-gray-300 p-2">
+                  <img
+                    class="w-16 h-auto"
+                    src="/assets/img/Single Product/Gallery - 4.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
             <!-- Desc Product -->
             <div
@@ -485,9 +510,9 @@
             </div>
           </div>
           <!-- seller detail -->
-          <div class="w-1/5 md:w-1/4 bg-red-200 hidden md:block">
+          <div class="lg:w-1/4 bg-white hidden lg:block">
             <div
-              class="flex mb-2 gap-x-2 gap-y-4 flex-row flex-wrap text-xs max-w-xs text-slate-800"
+              class="flex mb-2 bg-gray-100 p-2 gap-y-8 rounded-md flex-row flex-wrap text-xs max-w-xs text-slate-800"
             >
               <!-- 1 -->
               <div class="flex items-center flex-auto">
@@ -508,7 +533,7 @@
                       />
                     </svg>
                   </span>
-                  <span class="font-bold texl mr-2">فروشنده :</span>
+                  <span class="font-bold texl mr-2 text-sm">فروشنده :</span>
                 </div>
                 <span class="font-medium">دی جی تایز</span>
               </div>
@@ -531,7 +556,7 @@
                       />
                     </svg>
                   </span>
-                  <span class="font-bold texl mr-2">گارانتی :</span>
+                  <span class="font-bold texl mr-2 text-sm">گارانتی :</span>
                 </div>
                 <span class="font-medium">18ماه زرین خدمت</span>
               </div>
@@ -554,13 +579,42 @@
                       />
                     </svg>
                   </span>
-                  <span class="font-bold texl mr-2"> ارسال توسط: </span>
+                  <span class="font-bold texl mr-2 text-sm"> ارسال توسط: </span>
                 </div>
                 <span class="font-medium">انبار تهران</span>
+              </div>
+              <div
+                class="mt-5 flex gap-y-3 flex-col items-center justify-center w-full"
+              >
+                <!-- price Detail -->
+                <span
+                  class="w-full block text-orange-500 font-bold text-center text-xl"
+                  >28,250,000تومان</span
+                >
+                <!-- button detail -->
+                <button
+                  class="px-6 py-3 w-full text-lg text-white rounded-lg bg-orange-600"
+                >
+                  اضافه به سبد خرید
+                </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- global Button -->
+    <div
+      class="fixed lg:hidden shadow-[0_-4px_8px_0_rgba(0,0,0,0.2)] gap-x-2 z-10 flex justify-between items-center left-0 right-0 bottom-0 rounded-t-lg bg-white border-t-gray-400 px-4 py-2"
+    >
+      <button
+        class="px-4 py-4 flex-auto w-full text-sm text-white rounded-lg bg-orange-600"
+      >
+        اضافه به سبد خرید
+      </button>
+      <div class="mr-1 flex text-slate-700 flex-col">
+        <span>42,500,500</span>
+        <span class="text-gray-400 text-sm">تومان</span>
       </div>
     </div>
 
